@@ -1,16 +1,16 @@
-version: "latest"
+version: "1.0"
 
 services:
   database:
     container_name: database
-    image: postgres:latest
+    image: postgres:12.8
     restart: always
     environment:
       - POSTGRES_USER=ppl
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=pplbase
     ports:
-      - 5432:5432
+      -  "5432:5432"
     volumes:
       - db:/var/lib/postgresql/data 
 
